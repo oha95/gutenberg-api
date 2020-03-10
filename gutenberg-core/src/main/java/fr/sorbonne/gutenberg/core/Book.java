@@ -24,7 +24,7 @@ public class Book {
     }
 
     public Book(InputStream bookStream){
-        Stream<String> lines = new BufferedReader(new InputStreamReader(bookStream)).lines();
+        bookTextStream = new BufferedReader(new InputStreamReader(bookStream)).lines();
     }
 
     public String getBookName(){
