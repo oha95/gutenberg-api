@@ -1,0 +1,4 @@
+# Project exclude paths
+/gutenberg-api/target/
+/gutenberg-core/target/
+/gutenberg-indexation/target/
