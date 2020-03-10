@@ -5,15 +5,34 @@ import fr.sorbonne.gutenberg.core.utils.KMP;
 import fr.sorbonne.gutenberg.core.utils.Position;
 import fr.sorbonne.gutenberg.core.utils.regex.RegEx;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Stream;
 
 public class Book {
 
     private String bookId;
+    private String bookName;
+    private String bookAuthor;
+    private Stream<String> bookTextStream;
 
     public Book(String bookId) {
         this.bookId = bookId;
+    }
+
+    public Book(InputStream bookStream){
+        Stream<String> lines = new BufferedReader(new InputStreamReader(bookStream)).lines();
+    }
+
+    public String getBookName(){
+        return bookName;
+    }
+
+    public String getBookAuthor(){
+        return bookAuthor;
     }
 
     public Index getIndex() {
