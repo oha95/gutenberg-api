@@ -1,0 +1,23 @@
+
+
+.book-card{
+  margin-bottom: 50px;
+  width: 100px;
+}
+
+.c div {
+  display: flex;
+  flex-wrap: wrap;
+}
+.c {
+  color: #fff;
+  font: 100 24px/100px sans-serif;
+  height: 150px;
+  text-align: center;
+}
+
+.frag {
+  max-height: 700px;
+  overflow: fragments;
+
+}

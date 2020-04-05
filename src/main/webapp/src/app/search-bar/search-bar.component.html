@@ -1,0 +1,10 @@
+<!-- Search form -->
+<form (submit)="onSubmit()" class="form-inline waves-light" mdbWavesEffect>
+  <div class="md-form mt-t0">
+    <input [(ngModel)]="searchWord" name="searchWorld" class="form-control mr-sm-2" type="text" placeholder="Search">
+    <input type="submit" value="Search" mdbBtn color="info" mdbWavesEffect [disabled]="">
+  </div>
+</form>
+
+
+

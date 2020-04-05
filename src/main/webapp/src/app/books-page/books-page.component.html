@@ -1,0 +1,29 @@
+<h3></h3>
+
+<div class="container">
+  <div *ngIf="loading; then thenBlock else elseBlock"></div>
+  <ng-template #thenBlock>
+    <app-loading></app-loading>
+  </ng-template>
+  <ng-template #elseBlock>
+    <div class="row">
+      <mdb-card class="col-md-4 col-sm-6 book-card cartdS" *ngFor="let el of elements">
+        <!--Card image-->
+        <mdb-card-img
+          src="https://www.gutenberg.org/cache/epub/{{el.bookId}}/pg{{el.bookId}}.cover.medium.jpg"></mdb-card-img>
+        <!--Card content-->
+        <mdb-card-body>
+
+          <!--Title-->
+          <mdb-card-title><h6>{{el.title}}</h6></mdb-card-title>
+
+          <!--Text-->
+<!--          <mdb-card-text> Auteur:</mdb-card-text>-->
+
+          <a href="http://www.gutenberg.org/files/{{el.bookId}}/{{el.bookId}}-h/{{el.bookId}}-h.htm" mdbBtn color="primary" mdbWavesEffect>Download</a>
+        </mdb-card-body>
+      </mdb-card>
+    </div>
+  </ng-template>
+</div>
+

@@ -14,6 +14,7 @@ import fr.sorbonne.gutenberg.core.indexation.IndexGenerator;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 
 public class IndexMaker implements RequestHandler<S3Event, String> {
@@ -33,10 +34,12 @@ public class IndexMaker implements RequestHandler<S3Event, String> {
             return "";
         }
 
-        // Download the image from S3 into a stream
+        // Download the book from S3 into a stream
         AmazonS3 s3Client = AmazonS3ClientBuilder.defaultClient();
         S3Object s3Object = s3Client.getObject(new GetObjectRequest(srcBucket, srcKey));
         InputStream objectData = s3Object.getObjectContent();
+
+
 
         // generate Index
         IndexGenerator generator = new IndexGenerator(objectData);

@@ -70,7 +70,6 @@ public class JaccardGraph {
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-
     }
 
     public class JaccardNode {
@@ -163,6 +162,5 @@ public class JaccardGraph {
         public byte[][] getMat() {
             return mat;
         }
-
     }
 }

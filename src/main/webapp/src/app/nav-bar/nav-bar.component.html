@@ -1,0 +1,28 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark bg-primary" [containerInside]="false">
+
+  <!-- Navbar brand -->
+  <mdb-navbar-brand><a class="navbar-brand" href="#">Gutenberg</a></mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link waves-light" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <!-- Links -->
+
+    <!-- Search form -->
+    <form (submit)="click()" class="form-inline waves-light" mdbWavesEffect>
+      <div class="">
+        <input [(ngModel)]="search" name="search" class="form-control" type="text" placeholder="Search" aria-label="Search">
+      </div>
+    </form>
+  </links>
+  <!-- Collapsible content -->
+  <!-- Search form -->
+</mdb-navbar>
+<!--/.Navbar-->
